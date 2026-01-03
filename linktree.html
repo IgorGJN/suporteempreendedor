@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/icon.png" type="image/png">
+  <title>Linktree | Suporte Empreendedor</title>
+
+  <!-- =========================
+       VARIÁVEIS EDITÁVEIS
+       ========================= -->
+  <style>
+    :root {
+      /* CORES DA MARCA (EDITE AQUI) */
+      --cor-primaria: #0D47A1;   /* azul */
+      --cor-secundaria: #7B1FA2; /* roxo */
+      --cor-fundo: #F5F7FA;     /* branco */
+      --cor-texto: #2E2E2E;
+
+      /* OUTROS AJUSTES */
+      --raio: 14px;
+      --sombra: 0 10px 25px rgba(0,0,0,0.12);
+      --fonte: 'Montserrat', Arial, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--fonte);
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      background: var(--cor-fundo);
+      width: 100%;
+      max-width: 420px;
+      border-radius: var(--raio);
+      padding: 32px 24px;
+      box-shadow: var(--sombra);
+      text-align: center;
+    }
+
+    .logo {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--cor-texto);
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 24px;
+      color: #555;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link {
+      padding: 14px;
+      border-radius: var(--raio);
+      text-decoration: none;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .link:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- LOGO / INICIAL (EDITE) -->
+    <div class="logo"><img class="logo" src="img/icon-branco.png" alt="Logo"></div>
+
+    <!-- NOME E DESCRIÇÃO (EDITE) -->
+    <h1>Suporte Empreendedor</h1>
+    <p>Assessoria • MEI • Doméstica • Terceirização</p>
+
+    <!-- LINKS (EDITE OS TEXTOS E URLs) -->
+    <div class="links" id="links">
+      <a class="link" href="https://wa.me/5500000000000" target="_blank">💬 Falar no WhatsApp</a>
+      <a class="link" href="https://instagram.com/suporteempreendedor.ig" target="_blank">📸 Instagram</a>
+      <a class="link" href="index.html" target="_blank">🌐 Site Oficial</a>
+      <a class="link" href="mailto:contato@site.com">✉️ E-mail</a>
+    </div>
+
+    <footer>
+      © 2026 • Sua Marca
+    </footer>
+  </div>
+
+  <!-- JS (OPCIONAL, PARA FUTURAS FUNÇÕES) -->
+  <script>
+    // Exemplo: adicionar links dinamicamente
+    // const links = document.getElementById('links');
+    // links.innerHTML += '<a class="link" href="#">Novo Link</a>';
+  </script>
+
+</body>
+</html>

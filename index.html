@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/icon.png" type="image/png">
+  <title>Suporte Empreendedor</title>
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ÍCONES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --primaria: #7B1FA2;   /* lilás da marca */
+      --secundaria: #0D47A1; /* azul da marca */
+      --azul-medio: #1976D2;
+      --azul-claro: #42A5F5;
+      --roxo-medio: #9C27B0;
+      --roxo-claro: #BA68C8;
+      --fundo: #F5F7FA;
+      --branco: #FFFFFF;
+      --texto: #2E2E2E;
+      --cinza: #8E8E93;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--branco);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #eaeaea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--cinza);
+    }
+
+    nav a {
+      margin-left: 25px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      padding: 60px 40px;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+      color: var(--branco);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .hero .btn {
+      background: var(--branco);
+      color: var(--primaria);
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .hero-img {
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    /* ===== SEÇÕES ===== */
+    section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    /* ===== CARDS ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--branco);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .card i {
+      font-size: 26px;
+      color: var(--primaria);
+      margin-bottom: 15px;
+    }
+
+    /* ===== GRID INSTAGRAM ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .grid-item {
+      aspect-ratio: 1/1;
+      background: #eaeaea;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: var(--cinza);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--branco);
+      padding: 30px 40px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--cinza);
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      nav { display: none; }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img class="logo" src="img/icon.png" alt="Logo"></div>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#mei">MEI</a>
+    <a href="#domestica">Doméstica</a>
+    <a href="linktree.html">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Suporte para o Empreendedor simples, digital e sem complicação</h1>
+    <p>Especialistas em MEI, doméstica e pequenos negócios. Atendimento humano e 100% online.</p>
+    <a href="#contato" class="btn">Falar no WhatsApp</a>
+  </div>
+  <div class="hero-img"><img class="hero-img" src="img/nome.png" alt="Suporte Empreendedor"></div>
+</section>
+
+<section id="servicos">
+  <h2>Nossos Serviços</h2>
+  <div class="cards">
+    <div class="card"><i class="fa-solid fa-briefcase"></i><p>Assessoria Empresarial</p></div>
+    <div class="card"><i class="fa-solid fa-file-invoice"></i><p>MEI</p></div>
+    <div class="card"><i class="fa-solid fa-house"></i><p>Empregada Doméstica</p></div>
+    <div class="card"><i class="fa-solid fa-users"></i><p>Departamento Pessoal</p></div>
+  </div>
+</section>
+
+<section id="mei">
+  <h2>MEI</h2>
+  <p style="text-align:center; max-width:700px; margin:auto;">Abertura, regularização, mensalidade, DAS, funcionários e suporte completo ao Microempreendedor Individual.</p>
+</section>
+
+<section id="domestica">
+  <h2>Empregada Doméstica</h2>
+  <p style="text-align:center; max-width:700px; margin:auto;">Admissão, folha, eSocial, férias, rescisão e acompanhamento mensal.</p>
+</section>
+
+<section>
+  <h2>Conteúdos & Serviços</h2>
+  <div class="grid">
+    <div class="grid-item">Imagem</div>
+    <div class="grid-item">Imagem</div>
+    <div class="grid-item">Imagem</div>
+    <div class="grid-item">Imagem</div>
+    <div class="grid-item">Imagem</div>
+    <div class="grid-item">Imagem</div>
+  </div>
+</section>
+
+<footer id="contato">
+  <p>© 2026 – Nome do Escritório Contábil</p>
+  <p>Atendimento 100% online • WhatsApp • Instagram</p>
+</footer>
+
+</body>
+</html>
